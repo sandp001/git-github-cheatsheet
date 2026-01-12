@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git & GitHub Cheat Sheet | Pro Dark Theme</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1117;
+      color: #00ff9c;
+      display: flex;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: #010409;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      padding: 20px;
+      box-shadow: 4px 0 20px rgba(0,255,156,0.15);
+    }
+    .sidebar h2 {
+      color: #58a6ff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .sidebar a {
+      display: block;
+      color: #00ff9c;
+      text-decoration: none;
+      margin: 8px 0;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .sidebar a:hover {
+      color: #58a6ff;
+      transform: translateX(6px);
+    }
+
+    /* Main */
+    .main {
+      margin-left: 260px;
+      width: 100%;
+    }
+    header {
+      padding: 30px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      background: #010409;
+      box-shadow: 0 4px 20px rgba(0,255,156,0.2);
+      animation: slideDown 1s ease;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .container {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .chapter {
+      margin-bottom: 40px;
+      background: #010409;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 0 25px rgba(0,255,156,0.18);
+      animation: fadeUp 0.8s ease;
+    }
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .chapter h2 {
+      margin-top: 0;
+      color: #58a6ff;
+    }
+    .cmd-box {
+      background: #0d1117;
+      border: 1px solid #00ff9c;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cmd-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0,255,156,0.4);
+    }
+    code { font-size: 15px; }
+    button {
+      background: #00ff9c;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { background: #58a6ff; color: #fff; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #8b949e;
+    }
+    /* Mobile */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>📘 Chapters</h2>
+  <a href="#c1">Chapter 1</a>
+  <a href="#c2">Chapter 2</a>
+  <a href="#c3">Chapter 3</a>
+  <a href="#c4">Chapter 4</a>
+  <a href="#c5">Chapter 5</a>
+  <a href="#c6">Chapter 6</a>
+  <a href="#c7">Chapter 7</a>
+  <a href="#c8">Chapter 8</a>
+  <a href="#c9">Chapter 9</a>
+  <a href="#c10">Chapter 10</a>
+  <a href="#c11">Chapter 11</a>
+  <a href="#c12">Chapter 12</a>
+</div>
+
+<div class="main">
+<header>🚀 Git & GitHub Cheat Sheet – Beginner to Pro</header>
+<div class="container">
+
+<div id="c1" class="chapter"><h2>Chapter 1 – Git Introduction</h2><div class="cmd-box"><code>git --version</code><button onclick="copy('git --version')">Copy</button></div><div class="cmd-box"><code>git help</code><button onclick="copy('git help')">Copy</button></div></div>
+<div id="c2" class="chapter"><h2>Chapter 2 – Initialize Repository</h2><div class="cmd-box"><code>git init</code><button onclick="copy('git init')">Copy</button></div><div class="cmd-box"><code>git status</code><button onclick="copy('git status')">Copy</button></div></div>
+<div id="c3" class="chapter"><h2>Chapter 3 – Staging & Commit</h2><div class="cmd-box"><code>git add .</code><button onclick="copy('git add .')">Copy</button></div><div class="cmd-box"><code>git commit -m "message"</code><button onclick="copy('git commit -m \"message\"')">Copy</button></div></div>
+<div id="c4" class="chapter"><h2>Chapter 4 – Branching</h2><div class="cmd-box"><code>git branch</code><button onclick="copy('git branch')">Copy</button></div><div class="cmd-box"><code>git branch -M main</code><button onclick="copy('git branch -M main')">Copy</button></div></div>
+<div id="c5" class="chapter"><h2>Chapter 5 – Connect GitHub</h2><div class="cmd-box"><code>git remote add origin URL</code><button onclick="copy('git remote add origin URL')">Copy</button></div><div class="cmd-box"><code>git remote -v</code><button onclick="copy('git remote -v')">Copy</button></div></div>
+<div id="c6" class="chapter"><h2>Chapter 6 – Push to GitHub</h2><div class="cmd-box"><code>git push -u origin main</code><button onclick="copy('git push -u origin main')">Copy</button></div></div>
+<div id="c7" class="chapter"><h2>Chapter 7 – Clone & Pull</h2><div class="cmd-box"><code>git clone URL</code><button onclick="copy('git clone URL')">Copy</button></div><div class="cmd-box"><code>git pull</code><button onclick="copy('git pull')">Copy</button></div></div>
+<div id="c8" class="chapter"><h2>Chapter 8 – Logs & History</h2><div class="cmd-box"><code>git log</code><button onclick="copy('git log')">Copy</button></div><div class="cmd-box"><code>q</code><button onclick="copy('q')">Copy</button></div></div>
+<div id="c9" class="chapter"><h2>Chapter 9 – Undo Changes</h2><div class="cmd-box"><code>git restore file</code><button onclick="copy('git restore file')">Copy</button></div><div class="cmd-box"><code>git reset --soft HEAD~1</code><button onclick="copy('git reset --soft HEAD~1')">Copy</button></div></div>
+<div id="c10" class="chapter"><h2>Chapter 10 – Merge Branch</h2><div class="cmd-box"><code>git merge branch-name</code><button onclick="copy('git merge branch-name')">Copy</button></div></div>
+<div id="c11" class="chapter"><h2>Chapter 11 – Delete Branch</h2><div class="cmd-box"><code>git branch -d branch-name</code><button onclick="copy('git branch -d branch-name')">Copy</button></div></div>
+<div id="c12" class="chapter"><h2>Chapter 12 – Professional Tips</h2><div class="cmd-box"><code>.gitignore</code><button onclick="copy('.gitignore')">Copy</button></div><div class="cmd-box"><code>git config --global user.name "Name"</code><button onclick="copy('git config --global user.name \"Name\"')">Copy</button></div><div class="cmd-box"><code>git config --global user.email "email"</code><button onclick="copy('git config --global user.email \"email\"')">Copy</button></div></div>
+
+</div>
+<footer>💻 Built for Sandeep Kumar | Pro Git Hacker Vibes 😎</footer>
+</div>
+
+<script>
+function copy(text){navigator.clipboard.writeText(text);alert('Copied: '+text);} 
+</script>
+
+</body>
+</html>
 
